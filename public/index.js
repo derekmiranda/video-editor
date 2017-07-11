@@ -5,6 +5,15 @@
   const timeInfo = document.querySelector('.timeinfo');
   const video = document.querySelector('video');
 
+  const newline = (idx, len) => idx < len - 1 ? '\n' : '';
+  const intoPixels = num => `${num}px`;
+
+  video.addEventListener('loadeddata', () => {
+    const videoWidth = video.clientWidth;
+    console.log(videoWidth);
+    timeline.style.width = intoPixels(videoWidth);
+  })
+
   playBtn.addEventListener('click', () => {
     video.play();
   })
@@ -17,8 +26,6 @@
     updateInfoBox(event)
   })
 
-  const newline = (idx, len) => idx < len - 1 ? '\n' : '';
-  const getPixels = num => `${num}px`
   function updateInfoBox(event) {
     let msg = '';
     ['screenX', 'screenY', 'clientX', 'clientY'].forEach((item, idx, arr) => {
@@ -27,8 +34,8 @@
 
     Object.assign(timeInfo.style, {
       display: 'block',
-      top: getPixels(event.clientY),
-      left: getPixels(event.clientX),
+      top: intoPixels(event.clientY),
+      left: intoPixels(event.clientX),
     })
     
     timeInfo.innerText = msg;

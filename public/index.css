@@ -11,6 +11,6 @@ video {
 
 .timeline {
   height: 30px;
-  width: 800px;
   background-color: lightcoral;
+  padding: 0;
 }
