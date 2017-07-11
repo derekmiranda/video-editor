@@ -7,9 +7,11 @@ video {
   display: none;
   position: absolute;
   background-color: lightskyblue;
+  pointer-events: none;
 }
 
 .timeline {
+  display: none;
   height: 30px;
   background-color: lightcoral;
   padding: 0;

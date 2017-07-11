@@ -5,13 +5,19 @@
   const timeInfo = document.querySelector('.timeinfo');
   const video = document.querySelector('video');
 
+  // info box offset (for top and left) in px
+  const infoOffset = 10;
+
   const newline = (idx, len) => idx < len - 1 ? '\n' : '';
   const intoPixels = num => `${num}px`;
 
   video.addEventListener('loadeddata', () => {
     const videoWidth = video.clientWidth;
-    console.log(videoWidth);
-    timeline.style.width = intoPixels(videoWidth);
+    
+    Object.assign(timeline.style, {
+      display: 'block',
+      width: intoPixels(videoWidth),
+    })
   })
 
   playBtn.addEventListener('click', () => {
@@ -34,8 +40,8 @@
 
     Object.assign(timeInfo.style, {
       display: 'block',
-      top: intoPixels(event.clientY),
-      left: intoPixels(event.clientX),
+      top: intoPixels(event.clientY + infoOffset),
+      left: intoPixels(event.clientX + infoOffset),
     })
     
     timeInfo.innerText = msg;
