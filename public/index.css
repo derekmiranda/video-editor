@@ -2,3 +2,15 @@ video {
   height: 480px;
   width: auto;
 }
+
+.timeinfo {
+  display: none;
+  position: absolute;
+  background-color: lightskyblue;
+}
+
+.timeline {
+  height: 30px;
+  width: 800px;
+  background-color: lightcoral;
+}
