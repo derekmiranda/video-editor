@@ -1,0 +1,17 @@
+{
+  "name": "video-editor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Derek Miranda <derek.miranda.1992@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "scripts": {
+    "start": "node .",
+    "devstart": "nodemon ."
+  }
+}
