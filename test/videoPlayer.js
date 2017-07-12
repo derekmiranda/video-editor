@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const casper = require('casperjs');
+// const casper = require('casperjs');
 
 describe('Video Player', () => {
   describe('True', () => {
