@@ -5,6 +5,8 @@
   "author": "Derek Miranda <derek.miranda.1992@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "casperjs": "^1.1.4",
+    "mocha": "^3.4.2",
     "nodemon": "^1.11.0"
   },
   "dependencies": {
