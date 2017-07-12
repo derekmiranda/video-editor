@@ -32,6 +32,10 @@
     updateInfoBox(event)
   })
 
+  timeline.addEventListener('mouseout', () => {
+    timeInfo.style.display = 'none';
+  })
+
   function updateInfoBox(event) {
     let msg = '';
     ['screenX', 'screenY', 'clientX', 'clientY'].forEach((item, idx, arr) => {
