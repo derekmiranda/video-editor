@@ -6,7 +6,7 @@ video {
 .timeinfo {
   display: none;
   position: absolute;
-  background-color: lightskyblue;
+  background-color: lightcyan;
   pointer-events: none;
 }
 
